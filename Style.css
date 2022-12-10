@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root{
+
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    /*paragraphs*/
+    --Transparent-white: hsla(0, 0%, 100%, 0.75);
+    /*background, headings, buttons*/
+    --Very-light-gray: hsl(0, 0%, 95%);
+
+    --Big_shoulders:'Big Shoulders Display';
+    --Lexend-Deca: 'Lexend Deca';
+
+    font-size: 0.9375em;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--Very-light-gray);
+    font-family: var(--Lexend-Deca);
+    box-sizing: inherit;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    
+}
+
+main{
+    width: 13.333333333rem;
+}
+
+main .container .Box{
+    padding: 1rem;
+}
+main .container .Box > *{
+    margin: 0.67rem;
+}
+main .container .Box>p{
+    color: var(--Transparent-white);
+    font-size: .67rem;
+    line-height: 1.7;
+}
+main .container .Box > h1{
+    color: var(--Very-light-gray);
+    font-family: var(--Big_shoulders);
+    text-transform: uppercase;
+    font-size: 1.6rem;
+}
+
+main .container .Box button{
+    padding: 0.67rem 1.34rem;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--Very-light-gray);
+    cursor: pointer;
+    border: 1px solid;
+}
+
+main .container .Box-Sedans{
+    background-color: var(--Bright-orange);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+main .container .Box button{
+    font-family: var(--Lexend-Deca);
+}
+main .container .Box-Sedans button{
+    color: var(--Bright-orange);
+}
+main .container .Box-Sedans button:hover{
+    
+    color: var(--Very-light-gray);
+    background-color: var(--Bright-orange);
+}
+main .container .Box-SUVS{
+    background-color: var(--Dark-cyan);
+}
+
+main .container .Box-SUVS button{
+    color: var(--Dark-cyan);
+}
+
+main .container .Box-SUVS button:hover{
+    background-color:var(--Dark-cyan);
+    color: var(--Very-light-gray) ;
+}
+
+main .container .Box-LUXURY{
+    background-color: var(--Very-dark-cyan);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+main .container .Box-LUXURY button{
+    color: var(--Very-dark-cyan);
+}
+main .container .Box-LUXURY button:hover{
+    color: var(--Very-light-gray);
+    background-color: var(--Very-dark-cyan);
+}
+main .container .Box .Sedans{
+    background-image: url('./images/icon-sedans.svg');
+}
+main .container .Box .SUV{
+    background-image: url(./images/icon-suvs.svg);
+}
+main .container .Box .Luxury{
+    background-image: url(./images/icon-luxury.svg);
+}
+
+main .container .Box .icon{
+    width: 3rem;
+    height: 2rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 610px) {
+    main{
+        width: 43.4rem;
+    }
+    main .container{
+        display: flex;
+    }
+    main .container .Box > *{
+        margin: 1.6rem;
+    }
+
+    main .container .Box-Sedans{
+        border-bottom-left-radius: 5px;
+        border-top-right-radius: 0;
+    }
+    main .container .Box-LUXURY{
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 5px;
+    }
+
+}
